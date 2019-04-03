@@ -7,7 +7,7 @@
       <div class="descr">EMPOWER YOUR ECHO DOT, GOOGLE HOME MINI WITH FREEDOM</div>
       <button class="s1-btn" :style="btnSize">COMING SOON</button>
     </div>
-    <dot :dot-style="styleObj"/>
+    <dot :dot-style="styleObj" :bgcolor="'#fff'" :lncolor="'black'"/>
   </div>
 </template>
 
