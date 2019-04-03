@@ -3,6 +3,7 @@
         <s1 :s1-style="styleObj"/>
         <s2 :s2-style="styleObj"/>
         <s3 :s3-style="styleObj"/>
+        <s4 :s4-style="styleObj"/>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import s1 from '@/components/s1.vue';
 import s2 from '@/components/s2.vue';
 import s3 from '@/components/s3.vue';
+import s4 from '@/components/s4.vue';
 export default {
   data(){
     return {
@@ -22,7 +24,8 @@ export default {
   components:{
     s1,
     s2,
-    s3
+    s3,
+    s4
   },
   methods:{
     clicked(e){

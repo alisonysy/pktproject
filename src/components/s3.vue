@@ -29,7 +29,7 @@ export default {
   },
   computed:{
     computedHeight(){
-      return (885/1280)*this.styleObj.win_width +'px'
+      return (881/1280)*this.styleObj.win_width +'px'
     },
     imgTrans() {
       return "-" + (1765 / 1280) * this.styleObj.win_width + "px";
