@@ -10,7 +10,7 @@
 <script>
 import imageCompressor from "vue-image-compressor";
 export default {
-  data() {
+  /*data() {
     return {
       img: "",
       scale: 100,
@@ -19,7 +19,7 @@ export default {
       original: {},
       compressed: {}
     };
-  },
+  },*/
   components: { imageCompressor },
   methods: {
     getFiles(obj) {
