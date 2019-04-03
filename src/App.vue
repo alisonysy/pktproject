@@ -61,10 +61,22 @@ export default {
   width:100vw;
 }
 
+#app::-webkit-scrollbar-track{
+  width:3px;
+  background-color: #aaa;
+}
+
+#app::-webkit-scrollbar-thumb{
+  height:8px;
+  background-color: #888;
+}
+
+
 *{
   box-sizing: border-box;
   margin:0;
   padding:0;
 }
+
 
 </style>
