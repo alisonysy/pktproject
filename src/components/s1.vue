@@ -3,8 +3,8 @@
     <div class="s1-bg"></div>
     <div class="s1-img"></div>
     <div class="txt-wrapper" :style="{top:txtTop,left:txtLeft}">
-      <h1 class="heading">MAGBASE</h1>
-      <div class="descr">EMPOWER YOUR ECHO DOT, GOOGLE HOME MINI WITH FREEDOM</div>
+      <h1 class="heading" :style="heading">MAGBASE</h1>
+      <div class="descr" :style="desc">EMPOWER YOUR ECHO DOT, GOOGLE HOME MINI WITH FREEDOM</div>
       <button class="s1-btn" :style="btnSize">COMING SOON</button>
     </div>
     <dot :dot-style="styleObj" :bgcolor="'#fff'" :lncolor="'black'"/>
@@ -40,10 +40,27 @@ export default {
     btnSize(){
       return {
         width:this.btnRatio*this.styleObj.win_width + 'px',
-        height:(25/1280)*this.styleObj.win_width + 'px'
+        height:(25/1280)*this.styleObj.win_width + 'px',
+        fontSize:(8/1280)*this.styleObj.win_width + 'px',
       }
+    },
+    desc(){
+      return {
+  marginTop: (25/1280)*this.styleObj.win_width + 'px',
+  width: (240/1280)*this.styleObj.win_width + 'px',
+  lineHeight: (20/1280)*this.styleObj.win_width + 'px',
+  fontSize: (9/1280)*this.styleObj.win_width + 'px',
+  letterSpacing:(2.3/1280)*this.styleObj.win_width + 'px',
+      }
+    },
+    heading(){
+    return {
+        letterSpacing: (5/1280)*this.styleObj.win_width + 'px',
+        fontSize:(23/1280)*this.styleObj.win_width + 'px',
     }
+  }
   },
+  
   beforeCreate(){
     
   }
@@ -81,11 +98,9 @@ export default {
 }
 
 .heading{
-  letter-spacing: 5px;
   font-weight: 740;
   color: #fff;
   position: relative;
-  font-size: 23px;
   display: inline-block;
 }
 
@@ -100,22 +115,24 @@ export default {
 }
 
 .descr{
-  margin-top: 25px;
-  width: 240px;
-  line-height: 20px;
-  font-size: 9px;
+
   color: #fff;
-  letter-spacing: 2.3px;
+
 }
 
 .s1-btn{
   margin-top: 38px;
   background:#fff;
   color:#353535;
-  font-size: 8px;
   border:none;
   outline: none;
       font-weight: 900;
     letter-spacing: 2px;
+    cursor:pointer;
+}
+
+.s1-btn:hover{
+  background:#f5f6f8;
+  box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.55)
 }
 </style>

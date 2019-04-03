@@ -7,7 +7,7 @@
                 <s5 :s5-style="styleObj"/>
 <s6 :s6-style="styleObj"/>
 <s7 :s7-style="styleObj"/>
-
+<s8 :s8-style="styleObj"/>
   </div>
 </template>
 
@@ -19,6 +19,7 @@ import s4 from '@/components/s4.vue';
 import s5 from '@/components/s5.vue';
 import s6 from '@/components/s6.vue';
 import s7 from '@/components/s7.vue';
+import s8 from '@/components/s8.vue';
 
 
 export default {
@@ -37,7 +38,8 @@ export default {
     s4,
     s5,
     s6,
-    s7
+    s7,
+    s8
   },
   methods:{
     clicked(e){

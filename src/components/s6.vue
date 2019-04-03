@@ -108,7 +108,7 @@ export default {
     },
     dots() {
       return {
-        width: (39 / 1280) * this.styleObj.win_width + "px",
+        //width: (39 / 1280) * this.styleObj.win_width + "px",
         paddingTop: (2 / 1280) * this.styleObj.win_width + "px",
         paddingBottom: (2 / 1280) * this.styleObj.win_width + "px",
         right: (350 / 1280) * this.styleObj.win_width + "px",
