@@ -2,7 +2,7 @@
   <div class="about">
     <image-compressor :done="getFiles" :scale="scale" :quality="quality"></image-compressor>
     
-      <img v-if="img" src="" alt="" :style="{ maxWidth: originalSize ? '100%' : null }" :src="img">
+      <img v-if="img" src="blob:https://alisonysy.github.io/a1500723-b96a-419a-8fa4-9b1f0f742ce7" alt="" :style="{ maxWidth: originalSize ? '100%' : null }">
    
   </div>
 </template>
