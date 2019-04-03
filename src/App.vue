@@ -1,31 +1,48 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" @click="clicked">
+        <s1 :s1-style="styleObj"/>
+
   </div>
 </template>
+
+<script>
+import s1 from '@/components/s1.vue';
+export default {
+  data(){
+    return {
+      styleObj:{
+        win_width:'',
+        widthRatio:810/1280
+      }
+    }
+  },
+  components:{
+    s1
+  },
+  methods:{
+    clicked(e){
+      console.log(e.pageX + ' '+ e.pageY)
+    }
+  },
+  created(){
+    this.styleObj.win_width = document.documentElement.clientWidth;
+  }
+}
+</script>
+
 
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
+  width:100vw;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
