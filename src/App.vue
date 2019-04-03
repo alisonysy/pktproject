@@ -5,7 +5,7 @@
         <s3 :s3-style="styleObj"/>
         <s4 :s4-style="styleObj"/>
                 <s5 :s5-style="styleObj"/>
-
+<s6 :s6-style="styleObj"/>
   </div>
 </template>
 
@@ -15,6 +15,8 @@ import s2 from '@/components/s2.vue';
 import s3 from '@/components/s3.vue';
 import s4 from '@/components/s4.vue';
 import s5 from '@/components/s5.vue';
+import s6 from '@/components/s6.vue';
+
 
 export default {
   data(){
@@ -30,7 +32,8 @@ export default {
     s2,
     s3,
     s4,
-    s5
+    s5,
+    s6
   },
   methods:{
     clicked(e){
