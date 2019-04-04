@@ -54,7 +54,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("../assets/ptkMagbase.png");
+  background-image: url("../assets/ptkMagbase-min.png");
   background-size: 100%;
   width: 100%;
   height: 100%;
