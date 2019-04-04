@@ -68,4 +68,5 @@ export default {
   text-align: center;
   font-weight: 730;
 }
+
 </style>

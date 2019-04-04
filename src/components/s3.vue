@@ -87,4 +87,5 @@ export default {
   text-align: start;
   color:#353535;
 }
+
 </style>

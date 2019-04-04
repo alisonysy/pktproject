@@ -1,6 +1,6 @@
 <template>
   <div class="s8" :style="{height:computedHeight}">
-    <div class="s8-bg"></div>
+    <div class="s8-bg" :style="bg"></div>
     <div class="s8-img" :style="{backgroundPositionY:imgTrans}"></div>
     <h1 class="heading" :style="heading">THE MAGBASE</h1>
     <div class="txt" :style="txt">
@@ -48,6 +48,11 @@ export default {
         letterSpacing:(2/1280)*this.styleObj.win_width+'px',
       };
     },
+    bg(){
+      return {
+        width:'calc(100% - '+(108/1280)*this.styleObj.win_width+'px)'
+      }
+    }
   }
 };
 </script>
@@ -60,7 +65,6 @@ export default {
   position: relative;
 }
 .s8-bg {
-  width: calc(100% - 108px);
   background: #f5f6f8;
   height: 100%;
 }
@@ -112,6 +116,7 @@ export default {
     width:160px;
   }
 }
+
 
 @media screen and (max-width:1600px) {
   .txt::after{

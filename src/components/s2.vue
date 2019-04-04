@@ -101,5 +101,6 @@ export default {
     font-size: 5px;
     letter-spacing: 0;
 }
+
 </style>
 

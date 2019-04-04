@@ -183,4 +183,5 @@ export default {
   text-align: center;
   color:#353535;
 }
+
 </style>

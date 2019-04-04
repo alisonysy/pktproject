@@ -1,6 +1,6 @@
 <template>
   <div class="s6" :style="{height:computedHeight}">
-    <div class="s6-bg"></div>
+    <div class="s6-bg" :style="bg"></div>
 
     <div class="s6-img" :style="{backgroundPositionY:imgTrans}"></div>
     <h1 class="heading" :style="heading">KEY FEATURES</h1>
@@ -120,6 +120,11 @@ export default {
         width: (3 / 1280) * this.styleObj.win_width + "px",
         height: (3 / 1280) * this.styleObj.win_width + "px"
       };
+    },
+    bg(){
+      return {
+        width:'calc(100% - '+(108/1280)*this.styleObj.win_width+'px)'
+      }
     }
   }
 };
@@ -133,7 +138,6 @@ export default {
   position: relative;
 }
 .s6-bg {
-  width: calc(100% - 108px);
   background: #f5f6f8;
   height: 100%;
 }
@@ -226,4 +230,6 @@ export default {
   width: 3px;
   margin-left: 7px;
 }
+
+
 </style>

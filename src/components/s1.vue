@@ -1,6 +1,6 @@
 <template>
   <div class="s1" :style="{height:computedHeight}">
-    <div class="s1-bg"></div>
+    <div class="s1-bg" :style="bg"></div>
     <div class="s1-img"></div>
     <div class="txt-wrapper" :style="{top:txtTop,left:txtLeft}">
       <h1 class="heading" :style="heading">MAGBASE</h1>
@@ -58,81 +58,79 @@ export default {
         letterSpacing: (5/1280)*this.styleObj.win_width + 'px',
         fontSize:(23/1280)*this.styleObj.win_width + 'px',
     }
-  }
   },
-  
-  beforeCreate(){
-    
-  }
+   bg(){
+      return {
+        width:'calc(100% - '+(108/1280)*this.styleObj.win_width+'px)'
+      }
+    }
+  },
+
 };
 </script>
 
 <style scoped>
-
-.s1{
-  width:100vw;
+.s1 {
+  width: 100vw;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
-.s1-bg{
-  width:calc(100% - 108px);
-  background:#353535;
+.s1-bg {
+  background: #353535;
   height: 100%;
 }
 
-.s1-img{
+.s1-img {
   position: absolute;
-  background-image: url('../assets/ptkMagbase.png');
+  background-image: url("../assets/ptkMagbase.png");
   background-size: 100%;
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   background-origin: border-box;
-  transform:translateY(-70px);
+  transform: translateY(-70px);
 }
 
-.txt-wrapper{
+.txt-wrapper {
   position: absolute;
-  
 }
 
-.heading{
+.heading {
   font-weight: 740;
   color: #fff;
   position: relative;
   display: inline-block;
 }
 
-.heading::after{
-  content: 'TM';
+.heading::after {
+  content: "TM";
   position: absolute;
   right: -18px;
   font-size: 6px;
   top: -2px;
   letter-spacing: 3px;
-
 }
 
-.descr{
-
+.descr {
   color: #fff;
-
 }
 
-.s1-btn{
+.s1-btn {
   margin-top: 38px;
-  background:#fff;
-  color:#353535;
-  border:none;
+  background: #fff;
+  color: #353535;
+  border: none;
   outline: none;
-      font-weight: 900;
-    letter-spacing: 2px;
-    cursor:pointer;
+  font-weight: 900;
+  letter-spacing: 2px;
+  cursor: pointer;
 }
 
-.s1-btn:hover{
-  background:#f5f6f8;
-  box-shadow: 1px 1px 3px 2px rgba(0,0,0,0.55)
+.s1-btn:hover {
+  background: #f5f6f8;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.55);
 }
+
+
 </style>
